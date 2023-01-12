@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Clinica dental con equipamiento de ultima generacion ubicada en bs as, Argentina">
+    <meta name="keywords" content="ortodoncia, estetica dental, implantes, cirugias, turnos" >
+    <!-- fuente -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif:ital,wght@1,700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk&display=swap" rel="stylesheet">
+    <!-- animation.style -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+    <!--animation aos (scroll)  -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <!-- font awesome grepper icons -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"  rel="stylesheet" />
+    <!-- css -->
+    <link rel="stylesheet" href="../css/estilo.css">
+    <title>SMILE CLINICA DENTAL</title>
+</head>
+
+<body>
+
+    <div class="contenedor">
+        <header>
+            <nav>
+                <!-- logo de la pagina -->
+                <a href="../index.html" class="logo">
+                    <img src="../assets/images/locoConsultorio.png" alt="logo-consultorio">
+                    <h2 class="titulo">SMILE CLINICA DENTAL</h2>
+                </a>
+                <!-- checkbox para menu desplegable de celular -->
+                <input type="checkbox" id="check" placeholder="#">
+                <label for="check" class="checkBtn">
+                    <i class="fa-solid fa-bars"></i>
+                </label>
+                <!-- paguinas del nav -->
+                <ul>
+                    <li><a href="../index.html">Home</a></li>
+                    <li><a href="servicios.html">Servicio</a></li>
+                    <li><a href="obras_sociales.html">Obras Sociales</a></li>
+                    <li><a href="nustra_clinica.html">Nuestra Clinica</a></li>
+                    <li><a href="contacto.html">Contacto</a></li>
+                </ul>
+            </nav>
+        </header>
+
+        <main class="mainCont">
+            <!-- formulario -->
+            <section class="form">
+                <form action="" method="post" enctype="text/plain">
+                    <fieldset>
+                        <legend>CONTACTA CON NOSOTROS</legend><br>
+                        <div>
+                            <input type="text" name="nombres" id="nombres" placeholder="Nombre*"><br>
+                            <input type="email" name="MAIL" id="MAIL" placeholder="Mail*"><br>
+                            <input type="number" name="NUMERO" id="NUMERO" placeholder="N° de contacto"><br><br>
+                            
+                            <label for="Obrasocial">Seleccione su obra social </label><br>
+                            <select name="Obra social" id="Obrasocial">
+                                <option value="sancorsalud">SancorSalud</option>
+                                <option value="omint">Omint</option>
+                                <option value="consulmed">Consulmed</option>
+                                <option value="iosfa ">Iosfa</option>
+                                <option value="osmecon ">Osmecon</option>
+                                <option value="swiss medical ">Swiss Medical</option>
+                            </select><br><br>
+                            <textarea name="" id="" cols="50" rows="10" placeholder="MOTIVO DE CONSULTA"></textarea><br>
+                            <input type="checkbox" id="checkC">
+                            <label for="checkC">Estoy de acuerdo con Terminos y Condiciones</label><br>
+                            <input class="botonEnv" type="submit" value="Enviar">
+                        </div>
+                    </fieldset>
+                </form>
+            </section>
+            <!-- imagen odontologos -->
+            <section class="imgC">
+                <img src="../assets/images/odont.webp" alt="odontologos" width="500">
+            </section>
+            <!-- ubicacion de clinica MAPA -->
+            <section class="maps">
+                <iframe class="mapaC" title="ubicación" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d13620.143362690123!2d-64.17076117435248!3d-31.413138596216484!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9432a353e08947d1%3A0xcd5f931ae16b2e12!2sSmile%20Lab!5e0!3m2!1ses-419!2sar!4v1672705192018!5m2!1ses-419!2sar" width="600" height="450" allowfullscreen=""  referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </section>
+        </main>
+
+        
+        <footer>
+            <div class="datosClinica" data-aos="fade-up" data-aos-duration="3000">
+                <p>Dirección:Av. Meeks 71, 1º piso, Lomas de Zamora,Bs As, Argentina</p><br>
+                <p>telefono:(011) 4292 - 3574 / 4245 - 2901 / 2747</p><br>
+                <p>Horarios:Lunes a viernes de 10:00 a 18:00 hs</p><br>
+                <p>Mail:recepcion@odontologiail.com.ar</p><br>
+            </div>
+            <!-- redes sociales -->
+            <div class="redes_S">
+                <ul>
+                    <li>
+                        <a href="https://www.facebook.com/clinicasmilepuntadeleste" rel="noopener" target="_blank">
+                            <img src="../assets/icons/facebook.png" alt="logoFace">
+                        </a>
+                        <a href="https://www.instagram.com/smile_clinica_dental/" rel="noopener" target="_blank">
+                            <img src="../assets/icons/instagram.png" alt="logoInsta">
+                        </a>
+                        <a href="https://twitter.com/OrtodonciaSMILE" rel="noopener" target="_blank">
+                            <img src="../assets/icons/twitter.png" alt="logoTw">
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <p class="copyR">&copy;Clinica dental smile 2022 - Aviso Legal - Política de privacidad</p>
+        </footer>
+    </div>
+
+
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script>
+AOS.init();
+</script>
+</body>
+</html>

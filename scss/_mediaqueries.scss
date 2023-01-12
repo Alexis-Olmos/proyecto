@@ -1,0 +1,307 @@
+@media screen and (max-width:1200px) {
+    .contenedor .headerHome nav .logo .titulo {
+        font-size: 20px;
+    }
+    .contenedor .headerHome nav ul li {
+        line-height: 125px;
+    }
+    .contenedor .headerHome nav ul li a {
+        font-size: 14px;
+    }
+}
+@media screen and (max-width:1024px) {
+    /* home */
+    .logo{
+        padding: 20px 20px;
+    }
+    .logo img{
+        width: 50px;
+        height: 60px;
+    }
+    .logo .titulo{
+        font-size: 16px;
+        margin-left: 10px;
+    }
+    nav ul{
+        margin-right: 10px;
+    }
+    nav ul li{
+        line-height: 115px;
+    }
+    nav ul li a{
+        font-size: 12px;
+        padding: 5px 5px;
+    }
+/* obras sociales e img */
+    .contenedor .main_ObS{
+        grid-area: main;
+        display: grid;
+        grid-template-columns: repeat(1,1fr);
+        grid-template-rows: repeat(5,auto);
+
+        grid-template-areas: 
+        "mutual"
+        "mutual2"
+        "asideObraS"
+        "pago"
+        "medios"
+        ;
+    }
+
+    /* contacto */
+    .imgC img{
+        width: 400px;
+    }
+}
+
+@media screen and (max-width:900px) {
+    /* obra social */
+    .mutuales__primeras div img{ /*ver si borrar*/
+        margin: 0 15px;
+    }
+
+    .osmecon{
+        width: 65px;
+    }
+    .omint{
+        width: 75px;
+    }
+
+    /* contacto */
+    .contenedor .mainCont{
+        grid-template-columns:1fr;
+        grid-template-rows: repeat(3,auto);
+        grid-template-areas: 
+        "form"
+        "imgC"
+        "map"
+        ;
+    }
+
+}
+
+@media screen and (max-width:768px) {
+    .contenedor .headerHome nav .checkBtn {
+        display: block; 
+    }
+
+    nav ul{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        position:fixed;
+        width: 70%;
+        height: 100%;
+        background-color: #9b9898;
+        left: -100%;
+        text-align: center;
+        transition: all .5s;
+        overflow-y: hidden;
+    }
+
+    nav ul li{
+        margin: 40px 0;
+        line-height: 20px;
+    }
+    nav ul li a{
+        font-size: 20px;
+    }
+    li a:hover{
+        background: none;
+    }
+    #check:checked ~ ul{
+        left: 0;
+        }
+    
+
+
+    /* main */
+    main #clinica{
+
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(3,auto);
+        grid-template-areas: 
+        "article"
+        "asideUno"
+        "asideDos";
+    }
+
+    main #servicios{
+
+        grid-template-columns:1fr;
+        grid-template-rows: repeat(3,auto);
+        grid-template-areas: 
+        "parUno"
+        "parDos"
+        "parTres";
+    }
+    /* footer */
+    .copyR{
+        align-items: center;
+        justify-content: center;
+        margin:20px;
+    }
+/* nuestra-clinica */
+    .contenedor .main__clin{
+        grid-area: main;
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(4,auto);
+    
+        grid-template-areas: 
+        "imgClin"
+        "datClin"
+        "imgClin2"
+        "datClin1"
+        ;
+    }
+}
+
+@media screen and (max-width:700px) {
+        /* home */
+    .smile h1{
+        font-size: 20px;
+    } 
+    #img-portada p{
+        font-size: 15px;
+        margin-top: 30px;
+    }
+
+    /* servicios */
+    .carta__primeraServ h3,.carta__segundaServ h3,.carta__terceraServ h3,.carta__cuartaServ h3,
+    .carta__quintaServ h3,.carta__sextaServ h3{
+        font-size: 12px;
+    }
+    /* obra social */
+    .mutuales__primeras div{
+        display: flex;
+        flex-direction: column;
+        margin-top: 30px;
+    }
+    .mutuales__segundas div{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        justify-content: center;
+        margin-bottom: 10px;
+    }
+    .mutuales__segundas div img{
+        margin: 20px 0;
+    }
+
+    .main_ObS .publicidad{
+        display:none;
+    }
+
+    .main_ObS .medios__pago{
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+    }
+    .medios__pago  div{
+        margin: 10px 0;
+    }
+    .medios__pago  div img{
+        margin: 20px 0;
+    }
+
+    /* .nuestra-clinica */
+    .main__clin .videoYout{
+        width: 300px;
+    }
+
+}
+
+
+@media screen and (max-width:615px){
+    /* home */
+    .carta__primera,.carta__Segunda,.carta__tercera,
+    .carta__Cuarta,.carta__quinta,.carta__sexta{
+        display: flex;
+        flex-direction: column;
+        width: 60%;
+    }
+    .copyR{
+        text-align: center;
+    }
+}
+
+
+@media screen and (max-width:500px) {
+        /* home */
+    .clinica__trat .img{
+        display: none;
+    }
+    /* service */
+    #pag__servicios .cajas{
+        margin: 0 10px;
+        padding: 10px;
+        background-image: none;
+        background-color: #858282;
+    }
+    /* nuestra clinica */
+    .imgClin2 img{
+        width: 250px;
+    }
+
+    .nuestra-clinica div {
+        padding: 0 30px;
+    }
+
+    /* contacto */
+    .imgC img{
+        width: 250px;
+    }
+
+    .mainCont .form{
+        margin: 20px auto;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 200px;
+    }
+
+    .form form input, .form form textarea{
+        width: 200px;
+    } 
+
+    .form .botonEnv{
+        width: 60px;
+        padding: .5px;
+        position: static;
+        margin-left: 73px;
+    }
+
+}
+
+@media screen and (max-width:380px) {
+    /* home */
+    .parUno{
+        width: 100%;
+    }
+
+    .parUno h3{
+        font-size: 10px;
+    }
+
+
+    .copyR{
+        font-size: 10px;
+        text-align: center;
+    }
+    /* servicio */
+    .carta__primeraServ h3,.carta__segundaServ h3,.carta__terceraServ h3,.carta__cuartaServ h3,
+    .carta__quintaServ h3,.carta__sextaServ h3{
+        font-size: 8px;
+    }
+
+    /* .nuestra-clinica */
+    .main__clin .videoYout{
+        width: 200px;
+    }
+    .main__clin .figuras img{
+        width: 200px;
+    }
+}

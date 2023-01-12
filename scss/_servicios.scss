@@ -1,0 +1,180 @@
+.contenedor{
+    @include grilla-contenedor;
+    header{
+        grid-area: header;
+        width: 100%;
+        box-shadow: $sombra;
+        nav{
+            background-color: map-get($backgroundClinica , blanco);
+            height: 120px;
+            width: 100%;
+            .logo{
+                display: flex;
+                position: absolute;
+                padding: 20px 40px;
+                img{
+                    @include img(75px, 80px)
+                }
+                .titulo{
+                    font-size: 36px;
+                    margin-top: 20px;
+                    margin-left: 10px;
+                    color: map-get($coloresClinica , verde ) ;
+                }
+            }
+            #check{
+                display: none;
+            }
+            .checkBtn{
+                @include checkBtn;
+            }
+            ul{
+                @include navegador;
+            }
+        }
+    }
+    #pag__servicios{
+        grid-area: main;
+        display: grid;
+        grid-template-columns: repeat(3,1fr);
+        grid-template-rows: repeat(4,auto);
+        grid-template-areas: 
+        "datD datD datD"
+        "cartU cartU cartU"
+        "cartD cartD cartD"
+        "datU datU datU"
+        ;
+        background-color: map-get($backgroundClinica , transparente );
+        
+        .service{
+            grid-area:datD ;
+            display: flex;
+            text-align:$centro;
+            align-items: $centro;
+            justify-content: $centro;
+            margin-top: 100px;
+            margin-bottom: 50px;
+            padding: 0 50px;
+            .introS{
+                h3{
+                    @include cambio-color;
+                    animation-name: cambiarColor;
+                    animation-duration: 3s;
+                    animation-iteration-count: infinite;
+                }
+            }
+
+        }
+        .primCartas{
+            grid-area: cartU;
+            display: flex;
+            justify-content: space-around;
+            margin: 100px 20px 50px 20px;
+            h3{
+                color: white
+            }
+            .carta__primeraServ{
+                @include cartas;
+                background-image: linear-gradient(
+                    0deg,
+                    rgba(0,0,0,0.5),
+                    rgba(0,0,0,0.5)
+                    )
+                    ,url(../assets/images/bracket-tratamiento.jpg);
+                background-size:cover ;
+                background-repeat: no-repeat;
+                background-position: center top;
+            }
+            .carta__segundaServ{
+                @include cartas;
+                background-image: linear-gradient(
+                    0deg,
+                    rgba(0,0,0,0.5),
+                    rgba(0,0,0,0.5)
+                    )
+                    ,url(../assets/images/blanqueamiento.jpg);
+                background-size:cover;
+                background-repeat: no-repeat;
+                background-position: center center;
+            }
+            .carta__terceraServ{
+                @include cartas;
+                background-image: linear-gradient(
+                    0deg,
+                    rgba(0,0,0,0.5),
+                    rgba(0,0,0,0.5)
+                    )
+                    ,url(../assets/images/invisalight.png);
+                background-size:cover ;
+                background-repeat: no-repeat;
+                background-position: center bottom;
+            }
+        }
+        .segCartas{
+            grid-area: cartD;
+            display: flex;
+            justify-content: space-around;
+            margin: 50px 20px;
+            h3{
+                color: white
+            }
+            .carta__cuartaServ{
+                @include cartas;
+                background-image: linear-gradient(
+                    0deg,
+                    rgba(0,0,0,0.5),
+                    rgba(0,0,0,0.5)
+                    )
+                    ,url(../assets/images/endodoncia-nueva.jpg);
+                background-size:cover;
+                background-repeat: no-repeat;
+                background-position: center center;
+            }
+            .carta__quintaServ{
+                @include cartas;
+                background-image: linear-gradient(
+                    0deg,
+                    rgba(0,0,0,0.5),
+                    rgba(0,0,0,0.5)
+                    )
+                    ,url(../assets/images/tsyos.jpg);
+                background-size:cover ;
+                background-repeat: no-repeat;
+                background-position: center center;
+            }
+            .carta__sextaServ{
+                @include cartas;
+                background-image: linear-gradient(
+                    0deg,
+                    rgba(0,0,0,0.5),
+                    rgba(0,0,0,0.5)
+                    )
+                    ,url(../assets/images/carillas.jpg);
+                background-size:cover;
+                background-repeat: no-repeat;
+                background-position: center center;
+            }
+        }
+        .cajas{
+            grid-area:datU ;
+            margin: 0 40px;
+            padding: 20px;
+            background-image: linear-gradient(
+                0deg,
+                rgba(0,0,0,0.7),
+                rgba(0,0,0,0.7)
+                )
+                ,url(../assets/images/paciente2.jpg);
+            background-size:cover;
+            background-repeat: no-repeat;
+            background-position: center center;
+            span{
+                color: white;
+                margin: 0 20px;
+                h3{
+                    color: #0dd6eccb;
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,949 @@
+* {
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+  list-style-type: none;
+  box-sizing: border-box;
+  font-family: 'Space Grotesk', sans-serif; }
+
+.contenedor {
+  height: 100vh;
+  width: 100%;
+  margin: auto;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(5, auto);
+  grid-template-areas: "header header header" "main main main" "main main main" "main main main" "footer footer footer"; }
+  .contenedor .headerHome {
+    grid-area: header;
+    position: fixed;
+    width: 100%;
+    box-shadow: 1px 1px 5px #000; }
+    .contenedor .headerHome nav {
+      background-color: white;
+      height: 120px;
+      width: 100%; }
+      .contenedor .headerHome nav .logo {
+        display: flex;
+        position: absolute;
+        padding: 20px 40px; }
+        .contenedor .headerHome nav .logo img {
+          height: 80px;
+          width: 75px; }
+        .contenedor .headerHome nav .logo .titulo {
+          font-size: 36px;
+          margin-top: 20px;
+          margin-left: 10px;
+          color: #22e7b6; }
+      .contenedor .headerHome nav #check {
+        display: none; }
+      .contenedor .headerHome nav .checkBtn {
+        font-size: 30px;
+        color: #0dd6ec;
+        float: right;
+        line-height: 120px;
+        margin-right: 20px;
+        display: none; }
+      .contenedor .headerHome nav ul {
+        display: flex;
+        justify-content: flex-end;
+        margin-right: 30px; }
+        .contenedor .headerHome nav ul li {
+          font-family: 'Space Grotesk', sans-serif;
+          line-height: 130px;
+          margin: 0 10px; }
+          .contenedor .headerHome nav ul li a {
+            color: rgba(0, 0, 0, 0.678);
+            font-size: 18px;
+            padding: 7px 13px; }
+            .contenedor .headerHome nav ul li a:hover {
+              border-top: 3px solid #22e7b6;
+              font-weight: bold;
+              color: #0dd6ec; }
+  .contenedor main {
+    grid-area: main;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, auto);
+    grid-template-areas: "sectUno sectUno sectUno" "sectDos sectDos sectDos" "sectTres sectTres sectTres"; }
+    .contenedor main #img-portada {
+      grid-area: sectUno;
+      width: 100%;
+      height: 90vh;
+      background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(../assets/images/o_esta.jpg);
+      background-position: center center;
+      background-size: cover;
+      background-repeat: no-repeat;
+      margin-bottom: 40px;
+      color: white;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      text-align: center;
+      font-size: 20px; }
+      .contenedor main #img-portada .smile h1 {
+        font-size: 40px; }
+    .contenedor main #clinica {
+      grid-area: sectDos;
+      display: grid;
+      grid-template-columns: 0.8fr 0.5fr;
+      grid-template-rows: 1.3fr 0.7fr;
+      grid-template-areas: "article asideUno" "asideDos asideDos"; }
+      .contenedor main #clinica .img-clinica {
+        grid-area: article;
+        display: flex; }
+        .contenedor main #clinica .img-clinica img {
+          max-width: 100%;
+          height: auto;
+          width: 800px;
+          padding: 40px;
+          margin: auto;
+          border-radius: 50px; }
+      .contenedor main #clinica .clinica__datos {
+        grid-area: asideUno;
+        display: flex; }
+        .contenedor main #clinica .clinica__datos div {
+          display: flex;
+          flex-direction: column;
+          text-align: left;
+          align-items: center;
+          justify-content: center;
+          padding: 0 30px;
+          margin: 0 20px;
+          border: 2px dotted #0dd6ec;
+          color: #000000ad; }
+          .contenedor main #clinica .clinica__datos div h2 {
+            text-align: center;
+            align-items: center;
+            border-bottom: 2px groove #0dd6ec;
+            margin-bottom: 15px;
+            color: black; }
+          .contenedor main #clinica .clinica__datos div button {
+            background-color: #29282821;
+            cursor: pointer;
+            border: none;
+            color: #0dd6ec;
+            font-weight: bold;
+            padding: 10px; }
+      .contenedor main #clinica .clinica__trat {
+        grid-area: asideDos;
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        align-items: center;
+        justify-content: center;
+        padding: 40px 20px;
+        margin-top: 70px;
+        color: #000000ad; }
+        .contenedor main #clinica .clinica__trat h2 {
+          color: black; }
+        .contenedor main #clinica .clinica__trat button {
+          background-color: #29282821;
+          cursor: pointer;
+          border: none;
+          color: #0dd6ec;
+          font-weight: bold;
+          padding: 10px; }
+        .contenedor main #clinica .clinica__trat .img {
+          display: flex;
+          flex-direction: row;
+          justify-content: center;
+          height: auto;
+          width: 40px;
+          margin-top: 20px; }
+    .contenedor main #servicios {
+      grid-area: sectTres;
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      grid-template-rows: repeat(2, 1fr);
+      grid-template-areas: "parUno parUno parUno" "parUno parUno parUno";
+      padding: 90px 50px;
+      background-color: #e4e0e077; }
+      .contenedor main #servicios .parUno {
+        width: 100%;
+        grid-area: parUno;
+        display: flex;
+        justify-content: space-evenly;
+        flex-wrap: wrap;
+        align-content: space-around;
+        justify-content: space-around; }
+        .contenedor main #servicios .parUno h3 {
+          margin-top: 50px;
+          color: white; }
+        .contenedor main #servicios .parUno button {
+          margin-top: 10px;
+          cursor: pointer;
+          color: white;
+          font-size: 16px;
+          font-weight: bold;
+          background-color: transparent;
+          border: none; }
+          .contenedor main #servicios .parUno button:hover {
+            border-top: 2px solid #0dd6ec; }
+        .contenedor main #servicios .parUno .carta__primera {
+          background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(../assets/images/bracket-tratamiento.jpg);
+          background-size: cover;
+          background-repeat: no-repeat;
+          border: groove #0dd6ec;
+          display: flex;
+          flex-direction: column;
+          width: 30%;
+          height: 30vh;
+          text-align: center;
+          align-items: center;
+          justify-content: center;
+          margin: 20px; }
+          .contenedor main #servicios .parUno .carta__primera:hover {
+            transition-duration: 1.5s;
+            transition-delay: .3s;
+            transform: scale(1.15);
+            box-shadow: 5px 5px 5px 2px rgba(0, 0, 0, 0.8);
+            border: 2px solid #0dd6ec; }
+        .contenedor main #servicios .parUno .carta__Segunda {
+          background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(../assets/images/blanqueamiento.jpg);
+          background-size: cover;
+          background-repeat: no-repeat;
+          background-position: center center;
+          border: groove #0dd6ec;
+          display: flex;
+          flex-direction: column;
+          width: 30%;
+          height: 30vh;
+          text-align: center;
+          align-items: center;
+          justify-content: center;
+          margin: 20px; }
+          .contenedor main #servicios .parUno .carta__Segunda:hover {
+            transition-duration: 1.5s;
+            transition-delay: .3s;
+            transform: scale(1.15);
+            box-shadow: 5px 5px 5px 2px rgba(0, 0, 0, 0.8);
+            border: 2px solid #0dd6ec; }
+        .contenedor main #servicios .parUno .carta__tercera {
+          background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(../assets/images/invisalight.png);
+          background-size: cover;
+          background-repeat: no-repeat;
+          background-position: center bottom;
+          border: groove #0dd6ec;
+          display: flex;
+          flex-direction: column;
+          width: 30%;
+          height: 30vh;
+          text-align: center;
+          align-items: center;
+          justify-content: center;
+          margin: 20px; }
+          .contenedor main #servicios .parUno .carta__tercera:hover {
+            transition-duration: 1.5s;
+            transition-delay: .3s;
+            transform: scale(1.15);
+            box-shadow: 5px 5px 5px 2px rgba(0, 0, 0, 0.8);
+            border: 2px solid #0dd6ec; }
+        .contenedor main #servicios .parUno .carta__Cuarta {
+          background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(../assets/images/endodoncia-nueva.jpg);
+          background-size: cover;
+          background-repeat: no-repeat;
+          background-position: center center;
+          border: groove #0dd6ec;
+          display: flex;
+          flex-direction: column;
+          width: 30%;
+          height: 30vh;
+          text-align: center;
+          align-items: center;
+          justify-content: center;
+          margin: 20px; }
+          .contenedor main #servicios .parUno .carta__Cuarta:hover {
+            transition-duration: 1.5s;
+            transition-delay: .3s;
+            transform: scale(1.15);
+            box-shadow: 5px 5px 5px 2px rgba(0, 0, 0, 0.8);
+            border: 2px solid #0dd6ec; }
+        .contenedor main #servicios .parUno .carta__quinta {
+          background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(../assets/images/tsyos.jpg);
+          background-size: cover;
+          background-repeat: no-repeat;
+          background-position: center bottom;
+          border: groove #0dd6ec;
+          display: flex;
+          flex-direction: column;
+          width: 30%;
+          height: 30vh;
+          text-align: center;
+          align-items: center;
+          justify-content: center;
+          margin: 20px; }
+          .contenedor main #servicios .parUno .carta__quinta:hover {
+            transition-duration: 1.5s;
+            transition-delay: .3s;
+            transform: scale(1.15);
+            box-shadow: 5px 5px 5px 2px rgba(0, 0, 0, 0.8);
+            border: 2px solid #0dd6ec; }
+        .contenedor main #servicios .parUno .carta__sexta {
+          background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(../assets/images/carillas.jpg);
+          background-size: cover;
+          background-repeat: no-repeat;
+          background-position: center center;
+          border: groove #0dd6ec;
+          display: flex;
+          flex-direction: column;
+          width: 30%;
+          height: 30vh;
+          text-align: center;
+          align-items: center;
+          justify-content: center;
+          margin: 20px; }
+          .contenedor main #servicios .parUno .carta__sexta:hover {
+            transition-duration: 1.5s;
+            transition-delay: .3s;
+            transform: scale(1.15);
+            box-shadow: 5px 5px 5px 2px rgba(0, 0, 0, 0.8);
+            border: 2px solid #0dd6ec; }
+  .contenedor footer {
+    grid-area: footer;
+    background-color: rgba(0, 0, 0, 0.842);
+    border-top: 4px solid #0dd6ec; }
+    .contenedor footer .datosClinica {
+      margin-top: 80px;
+      display: flex;
+      flex-direction: column;
+      text-align: center;
+      color: white; }
+    .contenedor footer .redes_S {
+      display: flex;
+      align-items: center;
+      justify-content: center; }
+      .contenedor footer .redes_S img {
+        width: 40px;
+        margin: 10px 20px; }
+    .contenedor footer .copyR {
+      color: white;
+      display: flex;
+      justify-content: flex-end;
+      margin-right: 20px; }
+
+.contenedor {
+  height: 100vh;
+  width: 100%;
+  margin: auto;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(5, auto);
+  grid-template-areas: "header header header" "main main main" "main main main" "main main main" "footer footer footer"; }
+  .contenedor header {
+    grid-area: header;
+    width: 100%;
+    box-shadow: 1px 1px 5px #000; }
+    .contenedor header nav {
+      background-color: white;
+      height: 120px;
+      width: 100%; }
+      .contenedor header nav .logo {
+        display: flex;
+        position: absolute;
+        padding: 20px 40px; }
+        .contenedor header nav .logo img {
+          height: 80px;
+          width: 75px; }
+        .contenedor header nav .logo .titulo {
+          font-size: 36px;
+          margin-top: 20px;
+          margin-left: 10px;
+          color: #22e7b6; }
+      .contenedor header nav #check {
+        display: none; }
+      .contenedor header nav .checkBtn {
+        font-size: 30px;
+        color: #0dd6ec;
+        float: right;
+        line-height: 120px;
+        margin-right: 20px;
+        display: none; }
+      .contenedor header nav ul {
+        display: flex;
+        justify-content: flex-end;
+        margin-right: 30px; }
+        .contenedor header nav ul li {
+          font-family: 'Space Grotesk', sans-serif;
+          line-height: 130px;
+          margin: 0 10px; }
+          .contenedor header nav ul li a {
+            color: rgba(0, 0, 0, 0.678);
+            font-size: 18px;
+            padding: 7px 13px; }
+            .contenedor header nav ul li a:hover {
+              border-top: 3px solid #22e7b6;
+              font-weight: bold;
+              color: #0dd6ec; }
+  .contenedor #pag__servicios {
+    grid-area: main;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(4, auto);
+    grid-template-areas: "datD datD datD" "cartU cartU cartU" "cartD cartD cartD" "datU datU datU";
+    background-color: #e4e0e077; }
+    .contenedor #pag__servicios .service {
+      grid-area: datD;
+      display: flex;
+      text-align: center;
+      align-items: center;
+      justify-content: center;
+      margin-top: 100px;
+      margin-bottom: 50px;
+      padding: 0 50px; }
+      .contenedor #pag__servicios .service .introS h3 {
+        animation-name: cambiarColor;
+        animation-duration: 3s;
+        animation-iteration-count: infinite; }
+
+@keyframes cambiarColor {
+  0% {
+    color: #02ff96; }
+  25% {
+    color: #00d39e; }
+  50% {
+    color: #00968e; }
+  75% {
+    color: #6aeaf8; }
+  100% {
+    color: #0dd6ec; } }
+    .contenedor #pag__servicios .primCartas {
+      grid-area: cartU;
+      display: flex;
+      justify-content: space-around;
+      margin: 100px 20px 50px 20px; }
+      .contenedor #pag__servicios .primCartas h3 {
+        color: white; }
+      .contenedor #pag__servicios .primCartas .carta__primeraServ {
+        border: groove #0dd6ec;
+        display: flex;
+        flex-direction: column;
+        width: 30%;
+        height: 30vh;
+        text-align: center;
+        align-items: center;
+        justify-content: center;
+        margin: 20px;
+        background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(../assets/images/bracket-tratamiento.jpg);
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center top; }
+        .contenedor #pag__servicios .primCartas .carta__primeraServ:hover {
+          transition-duration: 1.5s;
+          transition-delay: .3s;
+          transform: scale(1.15);
+          box-shadow: 5px 5px 5px 2px rgba(0, 0, 0, 0.8);
+          border: 2px solid #0dd6ec; }
+      .contenedor #pag__servicios .primCartas .carta__segundaServ {
+        border: groove #0dd6ec;
+        display: flex;
+        flex-direction: column;
+        width: 30%;
+        height: 30vh;
+        text-align: center;
+        align-items: center;
+        justify-content: center;
+        margin: 20px;
+        background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(../assets/images/blanqueamiento.jpg);
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center center; }
+        .contenedor #pag__servicios .primCartas .carta__segundaServ:hover {
+          transition-duration: 1.5s;
+          transition-delay: .3s;
+          transform: scale(1.15);
+          box-shadow: 5px 5px 5px 2px rgba(0, 0, 0, 0.8);
+          border: 2px solid #0dd6ec; }
+      .contenedor #pag__servicios .primCartas .carta__terceraServ {
+        border: groove #0dd6ec;
+        display: flex;
+        flex-direction: column;
+        width: 30%;
+        height: 30vh;
+        text-align: center;
+        align-items: center;
+        justify-content: center;
+        margin: 20px;
+        background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(../assets/images/invisalight.png);
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center bottom; }
+        .contenedor #pag__servicios .primCartas .carta__terceraServ:hover {
+          transition-duration: 1.5s;
+          transition-delay: .3s;
+          transform: scale(1.15);
+          box-shadow: 5px 5px 5px 2px rgba(0, 0, 0, 0.8);
+          border: 2px solid #0dd6ec; }
+    .contenedor #pag__servicios .segCartas {
+      grid-area: cartD;
+      display: flex;
+      justify-content: space-around;
+      margin: 50px 20px; }
+      .contenedor #pag__servicios .segCartas h3 {
+        color: white; }
+      .contenedor #pag__servicios .segCartas .carta__cuartaServ {
+        border: groove #0dd6ec;
+        display: flex;
+        flex-direction: column;
+        width: 30%;
+        height: 30vh;
+        text-align: center;
+        align-items: center;
+        justify-content: center;
+        margin: 20px;
+        background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(../assets/images/endodoncia-nueva.jpg);
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center center; }
+        .contenedor #pag__servicios .segCartas .carta__cuartaServ:hover {
+          transition-duration: 1.5s;
+          transition-delay: .3s;
+          transform: scale(1.15);
+          box-shadow: 5px 5px 5px 2px rgba(0, 0, 0, 0.8);
+          border: 2px solid #0dd6ec; }
+      .contenedor #pag__servicios .segCartas .carta__quintaServ {
+        border: groove #0dd6ec;
+        display: flex;
+        flex-direction: column;
+        width: 30%;
+        height: 30vh;
+        text-align: center;
+        align-items: center;
+        justify-content: center;
+        margin: 20px;
+        background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(../assets/images/tsyos.jpg);
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center center; }
+        .contenedor #pag__servicios .segCartas .carta__quintaServ:hover {
+          transition-duration: 1.5s;
+          transition-delay: .3s;
+          transform: scale(1.15);
+          box-shadow: 5px 5px 5px 2px rgba(0, 0, 0, 0.8);
+          border: 2px solid #0dd6ec; }
+      .contenedor #pag__servicios .segCartas .carta__sextaServ {
+        border: groove #0dd6ec;
+        display: flex;
+        flex-direction: column;
+        width: 30%;
+        height: 30vh;
+        text-align: center;
+        align-items: center;
+        justify-content: center;
+        margin: 20px;
+        background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(../assets/images/carillas.jpg);
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center center; }
+        .contenedor #pag__servicios .segCartas .carta__sextaServ:hover {
+          transition-duration: 1.5s;
+          transition-delay: .3s;
+          transform: scale(1.15);
+          box-shadow: 5px 5px 5px 2px rgba(0, 0, 0, 0.8);
+          border: 2px solid #0dd6ec; }
+    .contenedor #pag__servicios .cajas {
+      grid-area: datU;
+      margin: 0 40px;
+      padding: 20px;
+      background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url(../assets/images/paciente2.jpg);
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-position: center center; }
+      .contenedor #pag__servicios .cajas span {
+        color: white;
+        margin: 0 20px; }
+        .contenedor #pag__servicios .cajas span h3 {
+          color: #0dd6eccb; }
+
+.contenedor {
+  height: 100vh;
+  width: 100%;
+  margin: auto;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(5, auto);
+  grid-template-areas: "header header header" "main main main" "main main main" "main main main" "footer footer footer"; }
+  .contenedor .main_ObS {
+    grid-area: main;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(4, auto);
+    grid-template-areas: "mutual mutual asideObraS" "mutual2 mutual2 asideObraS" "pago pago pago" "medios medios medios"; }
+    .contenedor .main_ObS .mutuales__primeras {
+      grid-area: mutual;
+      display: flex;
+      flex-direction: column;
+      text-align: center;
+      align-items: center;
+      justify-content: center;
+      margin: 40px 40px 0 40px; }
+      .contenedor .main_ObS .mutuales__primeras div {
+        display: flex; }
+        .contenedor .main_ObS .mutuales__primeras div img {
+          margin: 0 30px; }
+      .contenedor .main_ObS .mutuales__primeras h2 {
+        animation-name: cambiarColor;
+        animation-duration: 3s;
+        animation-iteration-count: infinite; }
+
+@keyframes cambiarColor {
+  0% {
+    color: #02ff96; }
+  25% {
+    color: #00d39e; }
+  50% {
+    color: #00968e; }
+  75% {
+    color: #6aeaf8; }
+  100% {
+    color: #0dd6ec; } }
+    .contenedor .main_ObS .mutuales__segundas {
+      grid-area: mutual2;
+      display: flex;
+      align-items: center;
+      text-align: center;
+      justify-content: center;
+      margin-bottom: 80px; }
+      .contenedor .main_ObS .mutuales__segundas .iosfa {
+        width: 200px; }
+      .contenedor .main_ObS .mutuales__segundas .osmecon {
+        width: 130px; }
+      .contenedor .main_ObS .mutuales__segundas .omint {
+        width: 150px; }
+      .contenedor .main_ObS .mutuales__segundas div img {
+        margin: 0 30px; }
+    .contenedor .main_ObS .publicidad {
+      grid-area: asideObraS;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 80px 0;
+      width: 100%; }
+      .contenedor .main_ObS .publicidad img {
+        width: 300px;
+        border: groove #0dd6ec; }
+    .contenedor .main_ObS .pago {
+      grid-area: pago;
+      display: flex;
+      flex-direction: column;
+      text-align: center;
+      align-items: center; }
+    .contenedor .main_ObS .medios__pago {
+      grid-area: medios;
+      display: flex;
+      align-items: center;
+      justify-content: space-evenly;
+      text-align: center; }
+      .contenedor .main_ObS .medios__pago div {
+        margin: 40px 0; }
+
+.contenedor {
+  height: 100vh;
+  width: 100%;
+  margin: auto;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(5, auto);
+  grid-template-areas: "header header header" "main main main" "main main main" "main main main" "footer footer footer"; }
+  .contenedor .main__clin {
+    grid-area: main;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, auto);
+    grid-template-areas: "imgClin imgClin imgClin" "datClin datClin imgClin2" "datClin1 datClin1 datClin1"; }
+    .contenedor .main__clin .figuras {
+      grid-area: imgClin;
+      width: 100%;
+      height: auto;
+      display: flex;
+      align-items: center;
+      text-align: center;
+      justify-content: center; }
+      .contenedor .main__clin .figuras img {
+        margin: 50px 20px;
+        border: groove #0dd6ec; }
+    .contenedor .main__clin .info_clin {
+      grid-area: datClin;
+      width: 100%;
+      display: flex;
+      text-align: left;
+      justify-content: center;
+      padding: 30px; }
+      .contenedor .main__clin .info_clin p {
+        color: rgba(0, 0, 0, 0.678); }
+    .contenedor .main__clin .imgClin2 {
+      grid-area: imgClin2;
+      padding: 30px;
+      width: 100%;
+      max-height: 100vh;
+      display: flex;
+      justify-content: center; }
+      .contenedor .main__clin .imgClin2 img {
+        border: groove #0dd6ec; }
+    .contenedor .main__clin .nuestra-clinica {
+      grid-area: datClin1;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 80px; }
+      .contenedor .main__clin .nuestra-clinica div {
+        padding: 0 120px; }
+      .contenedor .main__clin .nuestra-clinica p {
+        margin-top: 20px;
+        margin-bottom: 50px;
+        color: rgba(0, 0, 0, 0.678); }
+      .contenedor .main__clin .nuestra-clinica .wave {
+        position: relative;
+        top: 70px; }
+
+.contenedor {
+  height: 100vh;
+  width: 100%;
+  margin: auto;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(5, auto);
+  grid-template-areas: "header header header" "main main main" "main main main" "main main main" "footer footer footer"; }
+  .contenedor .mainCont {
+    grid-area: main;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, auto);
+    grid-template-areas: "form imgC" "map map";
+    background-color: #73c3cc3b; }
+    .contenedor .mainCont .form {
+      margin-top: 60px;
+      grid-area: form;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: bold;
+      color: rgba(0, 0, 0, 0.678); }
+      .contenedor .mainCont .form form {
+        background: radial-gradient(circle, rgba(104, 240, 149, 0.527) 0%, rgba(0, 101, 99, 0.582) 100%); }
+        .contenedor .mainCont .form form .botonEnv {
+          position: relative;
+          left: 150px;
+          color: rgba(0, 0, 0, 0.678);
+          font-weight: bold;
+          margin: 30px 0;
+          padding: 10px 20px;
+          cursor: pointer; }
+    .contenedor .mainCont .imgC {
+      margin-top: 60px;
+      grid-area: imgC;
+      display: flex;
+      width: 100%;
+      height: auto;
+      align-items: center;
+      justify-content: center; }
+    .contenedor .mainCont .maps {
+      grid-area: map;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-top: 100px;
+      margin-bottom: 50px; }
+      .contenedor .mainCont .maps .mapaC {
+        padding: 20px;
+        width: 100%;
+        height: 300px; }
+
+@media screen and (max-width: 1200px) {
+  .contenedor .headerHome nav .logo .titulo {
+    font-size: 20px; }
+  .contenedor .headerHome nav ul li {
+    line-height: 125px; }
+  .contenedor .headerHome nav ul li a {
+    font-size: 14px; } }
+
+@media screen and (max-width: 1024px) {
+  /* home */
+  .logo {
+    padding: 20px 20px; }
+  .logo img {
+    width: 50px;
+    height: 60px; }
+  .logo .titulo {
+    font-size: 16px;
+    margin-left: 10px; }
+  nav ul {
+    margin-right: 10px; }
+  nav ul li {
+    line-height: 115px; }
+  nav ul li a {
+    font-size: 12px;
+    padding: 5px 5px; }
+  /* obras sociales e img */
+  .contenedor .main_ObS {
+    grid-area: main;
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    grid-template-rows: repeat(5, auto);
+    grid-template-areas: "mutual" "mutual2" "asideObraS" "pago" "medios"; }
+  /* contacto */
+  .imgC img {
+    width: 400px; } }
+
+@media screen and (max-width: 900px) {
+  /* obra social */
+  .mutuales__primeras div img {
+    /*ver si borrar*/
+    margin: 0 15px; }
+  .osmecon {
+    width: 65px; }
+  .omint {
+    width: 75px; }
+  /* contacto */
+  .contenedor .mainCont {
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(3, auto);
+    grid-template-areas: "form" "imgC" "map"; } }
+
+@media screen and (max-width: 768px) {
+  .contenedor .headerHome nav .checkBtn {
+    display: block; }
+  nav ul {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    position: fixed;
+    width: 70%;
+    height: 100%;
+    background-color: #9b9898;
+    left: -100%;
+    text-align: center;
+    transition: all .5s;
+    overflow-y: hidden; }
+  nav ul li {
+    margin: 40px 0;
+    line-height: 20px; }
+  nav ul li a {
+    font-size: 20px; }
+  li a:hover {
+    background: none; }
+  #check:checked ~ ul {
+    left: 0; }
+  /* main */
+  main #clinica {
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(3, auto);
+    grid-template-areas: "article" "asideUno" "asideDos"; }
+  main #servicios {
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(3, auto);
+    grid-template-areas: "parUno" "parDos" "parTres"; }
+  /* footer */
+  .copyR {
+    align-items: center;
+    justify-content: center;
+    margin: 20px; }
+  /* nuestra-clinica */
+  .contenedor .main__clin {
+    grid-area: main;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(4, auto);
+    grid-template-areas: "imgClin" "datClin" "imgClin2" "datClin1"; } }
+
+@media screen and (max-width: 700px) {
+  /* home */
+  .smile h1 {
+    font-size: 20px; }
+  #img-portada p {
+    font-size: 15px;
+    margin-top: 30px; }
+  /* servicios */
+  .carta__primeraServ h3, .carta__segundaServ h3, .carta__terceraServ h3, .carta__cuartaServ h3,
+  .carta__quintaServ h3, .carta__sextaServ h3 {
+    font-size: 12px; }
+  /* obra social */
+  .mutuales__primeras div {
+    display: flex;
+    flex-direction: column;
+    margin-top: 30px; }
+  .mutuales__segundas div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+    margin-bottom: 10px; }
+  .mutuales__segundas div img {
+    margin: 20px 0; }
+  .main_ObS .publicidad {
+    display: none; }
+  .main_ObS .medios__pago {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center; }
+  .medios__pago div {
+    margin: 10px 0; }
+  .medios__pago div img {
+    margin: 20px 0; }
+  /* .nuestra-clinica */
+  .main__clin .videoYout {
+    width: 300px; } }
+
+@media screen and (max-width: 615px) {
+  /* home */
+  .carta__primera, .carta__Segunda, .carta__tercera,
+  .carta__Cuarta, .carta__quinta, .carta__sexta {
+    display: flex;
+    flex-direction: column;
+    width: 60%; }
+  .copyR {
+    text-align: center; } }
+
+@media screen and (max-width: 500px) {
+  /* home */
+  .clinica__trat .img {
+    display: none; }
+  /* service */
+  #pag__servicios .cajas {
+    margin: 0 10px;
+    padding: 10px;
+    background-image: none;
+    background-color: #858282; }
+  /* nuestra clinica */
+  .imgClin2 img {
+    width: 250px; }
+  .nuestra-clinica div {
+    padding: 0 30px; }
+  /* contacto */
+  .imgC img {
+    width: 250px; }
+  .mainCont .form {
+    margin: 20px auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 200px; }
+  .form form input, .form form textarea {
+    width: 200px; }
+  .form .botonEnv {
+    width: 60px;
+    padding: .5px;
+    position: static;
+    margin-left: 73px; } }
+
+@media screen and (max-width: 380px) {
+  /* home */
+  .parUno {
+    width: 100%; }
+  .parUno h3 {
+    font-size: 10px; }
+  .copyR {
+    font-size: 10px;
+    text-align: center; }
+  /* servicio */
+  .carta__primeraServ h3, .carta__segundaServ h3, .carta__terceraServ h3, .carta__cuartaServ h3,
+  .carta__quintaServ h3, .carta__sextaServ h3 {
+    font-size: 8px; }
+  /* .nuestra-clinica */
+  .main__clin .videoYout {
+    width: 200px; }
+  .main__clin .figuras img {
+    width: 200px; } }

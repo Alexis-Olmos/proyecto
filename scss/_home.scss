@@ -1,0 +1,253 @@
+*{
+    @include reseteo-general;
+}
+.contenedor{
+    @include grilla-contenedor;
+    .headerHome{
+        grid-area: header;
+        position: fixed;
+        width: 100%;
+        box-shadow: $sombra;
+        nav{
+            background-color: map-get($backgroundClinica , blanco);
+            height: 120px;
+            width: 100%;
+            .logo{
+                display: flex;
+                position: absolute;
+                padding: 20px 40px;
+                img{
+                    @include img(75px, 80px)
+                }
+                .titulo{
+                    font-size: 36px;
+                    margin-top: 20px;
+                    margin-left: 10px;
+                    color: map-get($coloresClinica , verde ) ;
+                }
+            }
+            #check{
+                display: none;
+            }
+            .checkBtn{
+                @include checkBtn;
+            }
+            ul{
+                @include navegador;
+            }
+        }
+    }
+    main{
+        @include grilla-main;
+        #img-portada{
+            @include seccionSmile;
+            .smile{
+                h1{
+                    font-size: 40px;
+                }
+            }
+        }
+
+        #clinica{
+            @include clinica;
+            .img-clinica{
+                grid-area: article;
+                display: flex;
+                img{
+                    max-width: 100%;
+                    @include img(800px, auto);
+                    padding: 40px;
+                    margin: auto;
+                    border-radius: 50px;
+                }
+            }
+            .clinica__datos{
+                grid-area: asideUno;
+                display: flex;
+                div{
+                    display: flex;
+                    flex-direction: column;
+                    text-align:left;
+                    align-items:center;
+                    justify-content: center;
+                    padding: 0 30px;
+                    margin: 0 20px;
+                    border: 2px dotted #0dd6ec ;
+                    color: #000000ad;
+                    h2{
+                        text-align: $centro; 
+                        align-items: $centro;
+                        border-bottom: 2px groove #0dd6ec;
+                        margin-bottom: 15px;
+                        color: black;
+                    }
+                    button{
+                        background-color: map-get($backgroundClinica,negroO );
+                        cursor: pointer;
+                        border: none;
+                        color: map-get($coloresClinica, celeste );
+                        font-weight: bold;
+                        padding: 10px;
+                    }
+                }
+            }
+            .clinica__trat{
+                grid-area:asideDos ;
+                display: flex;
+                flex-direction: column;
+                text-align: $centro;
+                align-items: $centro;
+                justify-content: $centro;
+                padding: 40px 20px;
+                margin-top: 70px;
+                color: #000000ad;
+                h2{
+                    color: map-get($coloresClinica, negro);
+                }
+                button{
+                    background-color: map-get($backgroundClinica,negroO );
+                    cursor: pointer;
+                    border: none;
+                    color: map-get($coloresClinica, celeste );
+                    font-weight: bold;
+                    padding: 10px;
+                }
+                .img{
+                    display: flex;
+                    flex-direction: row;
+                    justify-content: $centro;
+                    @include img (40px, auto);
+                    margin-top: 20px;
+                }
+            }
+        }
+        #servicios{
+            @include servicios;
+            .parUno{
+                width: 100%;
+                grid-area: parUno;
+                display: flex;
+                justify-content: space-evenly;
+                flex-wrap: wrap;
+                align-content: space-around;
+                justify-content: space-around;
+                h3{
+                    margin-top: 50px;
+                    color: map-get($coloresClinica , blanco );
+                }
+                button{
+                    margin-top: 10px;
+                    cursor: pointer;
+                    color: white;
+                    font-size: 16px;
+                    font-weight: bold;
+                    background-color: transparent;
+                    border: none;
+                    &:hover{
+                        border-top: 2px solid #0dd6ec;
+                    }
+                }
+                .carta__primera{
+                    background-image: linear-gradient(
+                        0deg,
+                        rgba(0,0,0,0.5),
+                        rgba(0,0,0,0.5)
+                        )
+                        ,url(../assets/images/bracket-tratamiento.jpg);
+                    background-size:cover ;
+                    background-repeat: no-repeat;
+                    @include cartas;
+                }
+                .carta__Segunda{
+                    background-image: linear-gradient(
+                        0deg,
+                        rgba(0,0,0,0.5),
+                        rgba(0,0,0,0.5)
+                        )
+                        ,url(../assets/images/blanqueamiento.jpg);
+                    background-size:cover;
+                    background-repeat: no-repeat;
+                    background-position: center center;
+                    @include cartas;
+                }
+                .carta__tercera{
+                    background-image: linear-gradient(
+                        0deg,
+                        rgba(0,0,0,0.5),
+                        rgba(0,0,0,0.5)
+                        )
+                        ,url(../assets/images/invisalight.png);
+                    background-size:cover ;
+                    background-repeat: no-repeat;
+                    background-position: center bottom;
+                    @include cartas;
+                }
+                .carta__Cuarta{
+                    background-image: linear-gradient(
+                        0deg,
+                        rgba(0,0,0,0.5),
+                        rgba(0,0,0,0.5)
+                        )
+                        ,url(../assets/images/endodoncia-nueva.jpg);
+                    background-size:cover;
+                    background-repeat: no-repeat;
+                    background-position: center center;
+                    @include cartas;
+                }
+                .carta__quinta{
+                    background-image: linear-gradient(
+                        0deg,
+                        rgba(0,0,0,0.5),
+                        rgba(0,0,0,0.5)
+                        )
+                        ,url(../assets/images/tsyos.jpg);
+                    background-size:cover ;
+                    background-repeat: no-repeat;
+                    background-position: center bottom;
+                    @include cartas;
+                }
+                .carta__sexta{
+                    background-image: linear-gradient(
+                        0deg,
+                        rgba(0,0,0,0.5),
+                        rgba(0,0,0,0.5)
+                        )
+                        ,url(../assets/images/carillas.jpg);
+                    background-size:cover;
+                    background-repeat: no-repeat;
+                    background-position: center center;
+                    @include cartas;
+                }    
+            }
+        }
+    }
+    footer{
+        grid-area: footer;
+        background-color: rgba(0, 0, 0, 0.842);
+        border-top: 4px solid #0dd6ec;
+        .datosClinica{
+            margin-top: 80px;
+            display: flex;
+            flex-direction: column;
+            text-align: center;
+            color: white;
+        }
+        .redes_S{
+            display: flex;
+            align-items: $centro;
+            justify-content: $centro;
+            img{
+                width: 40px;
+                margin: 10px 20px;
+            }
+        }
+        .copyR{
+            color: white;
+            display: flex;  
+            justify-content: flex-end;
+            margin-right: 20px;
+        }
+
+    }
+}
+
